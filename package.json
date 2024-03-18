@@ -12,7 +12,11 @@
   "dependencies": {
     "@astrojs/check": "^0.5.9",
     "@astrojs/svelte": "^5.2.0",
+    "@iconify-json/fa-brands": "^1.1.8",
+    "@iconify-json/ion": "^1.1.15",
     "astro": "^4.5.5",
+    "astro-icon": "^1.1.0",
+    "sass": "^1.72.0",
     "svelte": "^4.2.12",
     "typescript": "^5.4.2"
   }

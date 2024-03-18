@@ -1,0 +1,76 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header>
+  <nav>
+    <a href="./">Nelertile</a>
+
+    <div class="social-icons">
+      <a href="https://youtube.com/@Nelertile" target="_blank">
+        <Icon name="ion:logo-youtube" class="social-icon" widths="60px" />
+      </a>
+      <a href="https://twitch.com/nelertile" target="_blank">
+        <Icon name="ion:logo-twitch" class="social-icon" widths="60px" />
+      </a>
+      <a href="https://discord.gg/363yhgqjf7" target="_blank">
+        <Icon name="ion:logo-discord" class="social-icon" widths="60px" />
+      </a>
+      <a rel="me" href="https://twitter.com/nelertile">
+        <Icon name="ion:logo-twitter" class="social-icon" widths="60px" />
+      </a>
+      <a href="https://github.com/Nelertile" target="_blank">
+        <Icon name="ion:logo-github" class="social-icon" widths="60px" />
+      </a>
+      <a
+        href="https://open.spotify.com/artist/2nXNopOG7bZVy0mObAxs0x?si=OQwExKVKSlOnJLo5mS7atQ"
+        target="_blank"
+      >
+        <Icon name="fa-brands:spotify" class="social-icon" widths="60px" />
+      </a>
+    </div>
+  </nav>
+</header>
+
+<style lang="scss">
+  $foreground: #d2dae2;
+  $background: #1e272e;
+  $primary: #0be881;
+  $secondary: #05c46b;
+  $tertiary: #575fcf;
+  $light-gray: #808e9b;
+  $dark-gray: #12171a;
+
+  header {
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    background-color: #1e272e50;
+    backdrop-filter: blur(10px) brightness(50%);
+    position: fixed;
+  }
+
+  nav {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    > * {
+      margin: 10px 10px 10px 10px;
+    }
+
+    div:last-child {
+      margin-left: auto;
+      margin-right: 10%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $foreground;
+    transition: 0.3s;
+    &:hover {
+      color: $primary;
+    }
+  }
+</style>
