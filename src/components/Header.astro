@@ -26,7 +26,10 @@ import { Icon } from "astro-icon/components";
         href="https://open.spotify.com/artist/2nXNopOG7bZVy0mObAxs0x?si=OQwExKVKSlOnJLo5mS7atQ"
         target="_blank"
       >
-        <Icon name="fa-brands:spotify" class="social-icon" widths="60px" />
+        <Icon name="simple-icons:spotify" class="social-icon" widths="60px" />
+      </a>
+      <a href="https://anilist.co/user/Nelertile/" target="_blank">
+        <Icon name="simple-icons:anilist" class="social-icon" widths="60px" />
       </a>
     </div>
   </nav>
@@ -62,15 +65,6 @@ import { Icon } from "astro-icon/components";
     div:last-child {
       margin-left: auto;
       margin-right: 10%;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    color: $foreground;
-    transition: 0.3s;
-    &:hover {
-      color: $primary;
     }
   }
 </style>

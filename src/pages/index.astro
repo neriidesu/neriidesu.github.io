@@ -4,9 +4,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Nelertile">
   <main>
-    <img src="/Nelertile-logo.svg" alt="Nelertile Logo" height="300px" />
-    <h1>Hello, I'm <span id="gradient-text">Nelertile</span></h1>
-    <p id="italic">swedish content creator & musician</p>
+    <div class="header">
+      <img src="/Nelertile-logo.svg" alt="Nelertile Logo" height="300px" />
+      <h1>Hello, I'm <span id="gradient-text">Nelertile</span></h1>
+      <p id="italic">swedish content creator & musician</p>
+    </div>
     <div class="about">
       <p>
         I'm a Swedish guy from the beautiful city of Gothenburg situated on the
@@ -34,8 +36,20 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
   }
 
-  img {
-    filter: drop-shadow(0 0 0.5em #0be881aa);
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 0 10px 0;
+
+    img {
+      background-color: #12171a50;
+      border-radius: 25px;
+      padding: 10px;
+      width: 300px;
+      filter: drop-shadow(0 0 0.5em #0be881aa);
+    }
   }
 
   .about {

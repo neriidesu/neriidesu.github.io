@@ -3,8 +3,8 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/check': ^0.5.9
   '@astrojs/svelte': ^5.2.0
-  '@iconify-json/fa-brands': ^1.1.8
   '@iconify-json/ion': ^1.1.15
+  '@iconify-json/simple-icons': ^1.1.96
   astro: ^4.5.5
   astro-icon: ^1.1.0
   sass: ^1.72.0
@@ -14,8 +14,8 @@ specifiers:
 dependencies:
   '@astrojs/check': 0.5.9_typescript@5.4.2
   '@astrojs/svelte': 5.2.0_avtisivkcmwtlks73oeoma3n6q
-  '@iconify-json/fa-brands': 1.1.8
   '@iconify-json/ion': 1.1.15
+  '@iconify-json/simple-icons': 1.1.96
   astro: 4.5.5_vllhf6k6pmdhylwi5nlu232q7m
   astro-icon: 1.1.0
   sass: 1.72.0
@@ -615,14 +615,14 @@ packages:
     dev: false
     optional: true
 
-  /@iconify-json/fa-brands/1.1.8:
-    resolution: {integrity: sha512-0HVT1+7hDww2vTtGyX4maUyiEXDYd6CK57bOGJ3hc3fjmXpMI9QKdej21pPSv1jBZ2nGzTlg8WJ2yNtN88/lFQ==}
+  /@iconify-json/ion/1.1.15:
+    resolution: {integrity: sha512-ouEW3wypJCwv9pB6b5k7f2cRMXKSCuxn23S1e9TjJLXXWCF45Juyjls5olrnSRNqYdZise7ZLSojgM8/2kaDtA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
 
-  /@iconify-json/ion/1.1.15:
-    resolution: {integrity: sha512-ouEW3wypJCwv9pB6b5k7f2cRMXKSCuxn23S1e9TjJLXXWCF45Juyjls5olrnSRNqYdZise7ZLSojgM8/2kaDtA==}
+  /@iconify-json/simple-icons/1.1.96:
+    resolution: {integrity: sha512-qwCTomQT5CgV5hhgYyb/4Brcx4suoe0h/Gs4N7/Yoz6trWMC+Hc17EzpFkvZcrGc1Qtra3fuinp1IWrcrQH2WA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
