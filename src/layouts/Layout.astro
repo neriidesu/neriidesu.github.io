@@ -15,6 +15,12 @@ import Header from "../components/Header.astro";
     <meta name="description" content="Nelertile's Website" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -30,8 +36,6 @@ import Header from "../components/Header.astro";
   $secondary: #05c46b;
   $tertiary: #575fcf;
   $dark-gray: #12171a;
-
-  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
   body {
     width: 100%;
