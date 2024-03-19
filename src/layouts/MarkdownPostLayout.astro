@@ -1,0 +1,56 @@
+---
+const { frontmatter } = Astro.props;
+import Layout from "./Layout.astro";
+---
+
+<Layout title={frontmatter.title}>
+  <main>
+    <div class="header">
+      <h1>{frontmatter.title}</h1>
+      <img src="/Nelertile-logo.svg" alt="Nelertile Logo" />
+      <p id="italic">{frontmatter.pubDate.toString().slice(0, 10)}</p>
+      <p id="italic">{frontmatter.description}</p>
+      <div class="tags">
+        {
+          frontmatter.tags.map((tag) => (
+            <p class="tag" id="gradient-text">
+              <a href={`/blog/tags/${tag}`}>{tag}</a>
+            </p>
+          ))
+        }
+      </div>
+    </div>
+    <slot />
+  </main>
+</Layout>
+
+<style lang="scss">
+  $foreground: #d2dae2;
+  $background: #1e272e;
+  $primary: #0be881;
+  $secondary: #05c46b;
+  $tertiary: #575fcf;
+  $dark-gray: #12171a;
+
+  .header {
+    background-color: $dark-gray;
+    padding: 1em 0 1em 0;
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tags {
+    display: flex;
+    a {
+      text-decoration: none;
+    }
+  }
+</style>

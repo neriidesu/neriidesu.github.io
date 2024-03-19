@@ -1,0 +1,56 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+const allPosts = await Astro.glob("../posts/*.md");
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+---
+
+<Layout title="Nelertile > Blog > Tags">
+  <main>
+    <div class="header">
+      <h1>Tag Index</h1>
+    </div>
+    <p>List of all tags</p>
+    <a href="/blog/">back to main blog page</a>
+    <h2>Tags</h2>
+    <div class="tag-index">
+      {
+        tags.map((tag) => (
+          <a id="gradient-text" href={`/blog/tags/${tag}`}>
+            {tag}
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  h2 {
+    background-color: #05c46baa;
+    width: 100%;
+  }
+
+  .tag-index {
+    display: grid;
+    grid-template-columns: repeat(6, 10em);
+    gap: 10px;
+    grid-auto-rows: minmax(6em, 6em);
+    align-items: center;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1e272e50;
+      backdrop-filter: blur(10px) brightness(50%);
+      width: 100%;
+      height: 100%;
+      font-size: 2em;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      &:hover {
+        scale: 1.25;
+      }
+    }
+  }
+</style>
