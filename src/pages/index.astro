@@ -1,53 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
-Astro.redirect("/links");
 ---
 
-<Layout title="Nerii">
+<Layout title="nerii">
   <main>
-    <h1>
-      hiya! this site is currently under construction. for socials, please click <a
-        href="/links">here</a
-      >h1>
-
-      <!-- <div class="header">
-      <img src="/Nelertile-logo.svg" alt="Nelertile Logo" height="300px" />
-      <h1>Hello, I'm <span id="gradient-text">Nelertile</span></h1>
-      <p id="italic">swedish content creator & musician</p>
-    </div>
-    <div class="about">
-      <p>
-        I'm a Swedish guy from the beautiful city of Gothenburg situated on the
-        west coast of Sweden.
-      </p>
-      <p>
-        I currently attend middle school and am quite intrested in programming,
-        although my main interest is music.
-      </p>
-      <p>My other interests include:</p>
-      <div class="ul">
-        <p>Infrastructure</p>
-        <p>Photography</p>
-        <p>Anime/Manga</p>
-      </div>
-    </div> -->
-    </h1>
+    <h1 class="header">hiya, i'm nerii</h1>
+	<div class="about">
+		<p>i'm a musician and developer from <span id="gradient-text">Gothenburg, Sweden</span> </p>
+		<p>i also enjoy anime, geoguessr and infrastructure</p>
+	</div>
   </main>
 
   <style lang="scss">
     main {
-      padding-top: 12em;
+      padding-top: 4em;
     }
     .header {
       padding: 10px 0 10px 0;
-
-      img {
-        background-color: #12171a50;
-        border-radius: 25px;
-        padding: 10px;
-        width: 300px;
-        filter: drop-shadow(0 0 0.5em #0be881aa);
-      }
     }
 
     .about {
