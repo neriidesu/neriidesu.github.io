@@ -19,58 +19,47 @@ import Footer from "../components/Footer.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
-	  
     />
-	<link 
-	href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-	rel="stylesheet"
-	/>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <Header />
-    <slot />
-	<Footer/>
+      <slot />
+    <Footer />
   </body>
 </html>
 <style is:global lang="scss">
-  $text: #cdd6f4;
-  $base: #1e1e2e;
-  $primary: #0be881;
-  $mochagreen: #a6e3a1;
-  $mochamauve: #cba6f7;
-  $crust: #11111b;
+  $text: #f1dfda;
+  $base: #1a110f;
+  $primary: #ffb59e;
+  $accent: #306846;
+  $surface: #271d1b;
+  $subtle: #54433F;
   body {
     width: 100vw;
     height: 100vh;
     // background-image: url("/gray_pattern.png");
-	background-color: $base;
+    background-color: $base;
     color: $text;
-    font-family: "Outfit", sans-serif;
+    font-family: "Fira Code", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     margin: 0;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-      padding: 10px 0 10px 0;
   }
   main {
-    padding-top: 4em;
     display: flex;
     flex-direction: column;
     align-items: center;
-	height: calc(100vh - 8vh - 4em)
+    margin-bottom: 2em;
+    width: 95%;
   }
 
   #gradient-text {
@@ -85,21 +74,46 @@ import Footer from "../components/Footer.astro";
   #italic {
     font-style: italic;
   }
+
+  #accent {
+    color: $accent;
+  }
+
+  #subtle {
+    font-style: italic;
+    color: $subtle;
+    font-size: .8em;
+  }
   h1 {
     text-align: center;
     font-size: 4em;
   }
 
   h2 {
-    text-align: center;
-    font-size: 2em;
+    text-align: left;
+    font-size: 1em;
+    color: $subtle;
+  }
+  .header {
+    border: 1px solid $primary;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .section {
+    margin: 10px 0px 10px 0px;
+    p {
+      text-align: left;
+    }
+    border: 1px solid $primary;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
   }
 
   p {
     text-align: center;
     font-size: 1em;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 
   .ul {
@@ -112,7 +126,21 @@ import Footer from "../components/Footer.astro";
     color: $text;
     transition: 0.3s;
     &:hover {
-      color: $mochagreen;
+      color: $primary;
     }
   }
+  @media (min-width: 1000px){
+		main {
+      width: 60%
+    }
+
+	}
+  @media (min-width: 1400px){
+		main {
+      width: 40%
+    }
+
+	}
+
+  
 </style>

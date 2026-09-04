@@ -9,25 +9,28 @@
     <a class="social" href="https://youtube.com/@neriidesu">youtube</a>
     <a class="social" href="https://twitch.com/neriidesu">twitch</a>
     <a class="social" href="https://neriidesu.github.io/discord">discord</a>
-    <a class="social" href="https://bsky.app/profile/neriidesu.bsky.social">bluesky</a>
     <a class="social" href="https://twitter.com/neriidesu">twitter</a>
     <a class="social" href="https://github.com/neriidesu">github</a>
     <a class="social" href="https://neriidesu.github.io/spotify">spotify</a>
     <a class="social" href="https://anilist.co/user/neriidesu/">anilist</a>
+    <a class="social" href="https://www.last.fm/user/neriidesu">last.fm</a>
     <a class="social" href="mailto:neriidesu@proton.me">email me</a>
   </div>
   <p>made with <span id="pink">&lt;3</span> by nerii</p>
-  <p>using <a href="https://catppuccin.com/palette">catppuccin</a> mocha</p>
-  <br />
   <a href="/">/full site/</a>
 </main>
 
 <style lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-
+$text: #f1dfda;
+  $base: #1a110f;
+  $primary: #ffb59e;
+  $accent: #306846;
+  $surface: #271d1b;
+  $subtle: #54433F;
   body {
-    background-color: #1e1e2e;
-    color: #cdd6f4;
+    background-color: $base;
+    color: $text;
     font-family: "Fira Code", monospace;
     font-size: 1em;
     overflow-x: hidden;
@@ -44,16 +47,16 @@
   }
 
   a {
-    color: #89b4fa;
+    color: $primary;
   }
 
   .social {
-    color: #cba6f7;
+    color: $primary;
     margin: 10px;
   }
 
   #green {
-    color: #a6e3a1;
+    color: $accent;
   }
   #pink {
     color: #f5c2e7;

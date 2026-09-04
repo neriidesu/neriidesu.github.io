@@ -1,27 +1,121 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Work from "../components/Work.astro";
 ---
 
 <Layout title="nerii">
   <main>
-    <h1 class="header">hiya, i'm nerii</h1>
-	<div class="about">
-		<p>i'm a musician and developer from <span id="gradient-text">Gothenburg, Sweden</span> </p>
-		<p>i also enjoy anime, manga, j-rock and infrastructure</p>
-    <p>/currently studying <span id="gradient-text">game development</span> in high school/</p>
-	</div>
+    <div class="header">
+      <h1>hiya, i'm <span id="accent">nerii</span></h1>
+      <p id="italic">swedish musician and developer</p>
+    </div>
+    <div class="section">
+      <h2>/about/</h2>
+      <p>
+        I'm a musician and developer from <span id="italic"
+          >Gothenburg, Sweden</span
+        >. I've been playing the guitar for about 4 years, and the trumpet for
+        over 8 years before that. I'm currently studying game development in
+        high school and I spend a lot of my free time on coding, as I find
+        making stuff fun. Other than music and coding, I also enjoy watching
+        anime, reading, playing videogames, tinkering with stuff (although I rarely get the chance hardware-wise). I've recently been binge-watching homelabbing videos, and wish to get one setup once I move out.
+      </p>
+
+      <p>I like being outside in nature (another thing I do way to little) and travelling once in a while. I dabble in photography whenever I feel like it, either with my phone or my mom's DLSR. I'm also currently learning Japanese, and wish to go to Japan some day. Either just to visit, or maybe live there for a bit.</p>
+
+      <p>I'm one of those people who wants to do way to much stuff compared to how much time they have, so these are just some of my interests.</p>
+
+      <p>
+        I'm also a founder of a Swedish Minecraft SMP called <a
+          href="https://mytocraft.se">Mytocraft</a
+        >.
+      </p>
+      <h2>/quickies/</h2>
+      <div class="quickies">
+        <div>
+          <p>Favorite game?</p>
+          <p>NieR Automata</p>
+        </div>
+        <div>
+          <p>Favorite series?</p>
+          <p>Hibike! Euphonium</p>
+        </div>
+        <div>
+          <p>Favorite artist?</p>
+          <p>Yorushika</p>
+        </div>
+        <div>
+          <p>Favorite book-series?</p>
+          <p>Wheel of Time</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>/status/</h2>
+      <div class="quickies">
+        <div>
+          <p>Currently reading:</p>
+          <p>The Shadow Rising by Robert Jordan</p>
+        </div>
+        <div>
+          <p>Next up:</p>
+          <p>The Fires of Heaven by Robert Jordan</p>
+        </div>
+        <br />
+        <div>
+          <p>Current show/movie:</p>
+          <p>-</p>
+        </div>
+        <div>
+          <p>Next show/movie:</p>
+          <p>Suzumiya Haruhi no Shoushitsu</p>
+        </div>
+        <a id="subtle" href="https://anilist.co/user/neriidesu"
+          >more anime status stuff</a
+        >
+        <br />
+        <br />
+        <div>
+          <p>Favorite song:</p>
+          <p>CRAZZZY - Aooo</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>/projects/</h2>
+      <Work
+        title="nerii-shell"
+        description="highly opinionated shell built with quickshell for hyprland"
+        url="https://github.com/neriidesu/nerii-shell"
+      />
+      <Work
+        title="LitematicaJSONParser"
+        description="Litematica material list parser and viewer written in Rust"
+        url="https://github.com/neriidesu/LitematicaJSONParser"
+        }
+      />
+      <Work
+        title="CreeperLauncher"
+        description="Minecraft mod that launches you when a creeper explodes, instead of you taking damage. "
+        url="https://github.com/neriidesu/CreeperLauncher"
+        }
+      />
+    </div>
   </main>
-
-  <style lang="scss">
-  main {
-      padding-top: 4em;
-    }
-
-    .about {
-      padding-top: 8em;
-      padding-bottom: 4em;
-    }
-
-	
-  </style>
 </Layout>
+
+<style lang="scss">
+  .quickies {
+    div {
+      display: flex;
+      flex-direction: row;
+      :last-child {
+        margin-left: auto;
+      }
+      p {
+        margin: 2px;
+      }
+    }
+    margin-bottom: 10px;
+  }
+</style>
